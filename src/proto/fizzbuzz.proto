@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package clojure_grpc_fizzbuzz;
+option java_package = "clojure_grpc_fizzbuzz.grpc";
+option java_outer_classname = "MessageTypes";
+
+service FizzBuzz {
+  rpc FizzBuzz(Request) returns (Response) {}
+}
+
+message Request {
+  int64 n = 1;
+}
+
+message Response {
+  string message = 1;
+}
